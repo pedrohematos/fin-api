@@ -41,6 +41,12 @@ function getBalance(statement) {
   return balance;
 }
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    NAME: "financial api",
+  });
+});
+
 app.post("/account", (req, res) => {
   const { cpf, name } = req.body;
 
